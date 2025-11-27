@@ -1,6 +1,6 @@
 #Fibonacci Series Factorial Calculator
 #Author: Earl Tavera
-#Description: This program will ask or any number and will take as the value of N before generating the Fibonacci series and compute the factorial of N.
+#Description: This program will ask for a positive number and will take as the value of N before generating the Fibonacci series and compute the factorial of N.
 
 def fibonacci_series(N):
     """
@@ -48,11 +48,11 @@ def N_from_user():
             if N < 0:
                 print("Input must be a positve integer (0, 1, 2, ...).")
                 continue # Go back to the start of the loop
-            return N # Return N if it's a valid non-negative integer
+            return N # Return N if it's a valid positve integer
         except ValueError:
             print("Invalid input. Please enter a whole number.")
 
-# Get N once using the new function
+# Getting the value of N
 N = N_from_user()
         
 # 1. Generate the Fibonacci series
