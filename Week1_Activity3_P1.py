@@ -39,7 +39,7 @@ def factorial(N):
 # --- Main execution block with User Input ---
 
 def N_from_user():
-    """Prompts the user for a non-negative integer N."""
+    """Prompts the user for a positive integer N."""
     while True:
         try:
             user_input = input("Enter a positive integer (N) to calculate: ")
