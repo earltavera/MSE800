@@ -55,7 +55,7 @@ class Academic(Staff):
 
     def display_info(self):
         super().display_info()
-        print(f"Category: Academic | Publications: {', '.join(self.publications)}")
+        print(f"Category: Academic Staff | Publications: {', '.join(self.publications)}")
 
 
 # Demonstration #
