@@ -1,137 +1,77 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 23,
-   "id": "9e67bd7f-25b0-47fc-b134-e35c3ec604e0",
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "--- University Records ---\n",
-      "ID: 1 | Name: Albert Smith\n",
-      "Role: Student | Student ID: S10023\n",
-      "\n",
-      "ID: 2 | Name: Roxy Miller\n",
-      "Staff ID: ST99 | Tax Number: TAX-882\n",
-      "Category: General Staff | Pay Rate: $45.0/hr\n",
-      "\n",
-      "ID: 3 | Name: Dr. Benjz Jones\n",
-      "Staff ID: ST42 | Tax Number: TAX-115\n",
-      "Category: Academic | Publications: MSE, Pinoy Pawnstar\n"
-     ]
-    }
-   ],
-   "source": [
-    "# Base Class #\n",
-    "class Person:\n",
-    "    \"\"\"Represents the root of the hierarchy.\"\"\"\n",
-    "    def __init__(self, id, name):\n",
-    "        self.id = id\n",
-    "        self.name = name\n",
-    "\n",
-    "    def display_info(self):\n",
-    "        print(f\"ID: {self.id} | Name: {self.name}\")\n",
-    "\n",
-    "\n",
-    "# Child Class of Person #\n",
-    "class Student(Person):\n",
-    "    \"\"\"Inherits from Person. Adds student-specific ID.\"\"\"\n",
-    "    def __init__(self, id, name, student_id):\n",
-    "# Using super() to initialize base Person attributes\n",
-    "        super().__init__(id, name)\n",
-    "        self.student_id = student_id\n",
-    "\n",
-    "    def display_info(self):\n",
-    "        super().display_info()\n",
-    "        print(f\"Role: Student | Student ID: {self.student_id}\")\n",
-    "\n",
-    "\n",
-    "class Staff(Person):\n",
-    "    \"\"\"Inherits from Person. Acts as a base for specific staff types.\"\"\"\n",
-    "    def __init__(self, id, name, staff_id, tax_num):\n",
-    "        super().__init__(id, name)\n",
-    "        self.staff_id = staff_id\n",
-    "        self.tax_num = tax_num\n",
-    "\n",
-    "    def display_info(self):\n",
-    "        super().display_info()\n",
-    "        print(f\"Staff ID: {self.staff_id} | Tax Number: {self.tax_num}\")\n",
-    "\n",
-    "\n",
-    "# Second Level Inheritance (Multi-level) #\n",
-    "class General(Staff):\n",
-    "    \"\"\"Inherits from Staff. Represents administrative/support personnel.\"\"\"\n",
-    "    def __init__(self, id, name, staff_id, tax_num, rate_of_pay):\n",
-    "# Passes info up to Staff, which then passes important information to Person\n",
-    "        super().__init__(id, name, staff_id, tax_num)\n",
-    "        self.rate_of_pay = rate_of_pay\n",
-    "\n",
-    "    def display_info(self):\n",
-    "        super().display_info()\n",
-    "        print(f\"Category: General Staff | Pay Rate: ${self.rate_of_pay}/hr\")\n",
-    "\n",
-    "\n",
-    "class Academic(Staff):\n",
-    "    \"\"\"Inherits from Staff. Represents faculty/researchers.\"\"\"\n",
-    "    def __init__(self, id, name, staff_id, tax_num, publications):\n",
-    "        super().__init__(id, name, staff_id, tax_num)\n",
-    "        self.publications = publications  # List of strings\n",
-    "\n",
-    "    def display_info(self):\n",
-    "        super().display_info()\n",
-    "        print(f\"Category: Academic | Publications: {', '.join(self.publications)}\")\n",
-    "\n",
-    "\n",
-    "# Demonstration #\n",
-    "if __name__ == \"__main__\":\n",
-    "    print(\"--- University Records ---\")\n",
-    "    \n",
-    "    # Create a Student\n",
-    "    s1 = Student(1, \"Albert Smith\", \"S10023\")\n",
-    "    s1.display_info()\n",
-    "    print()\n",
-    "\n",
-    "    # Create General Staff\n",
-    "    g1 = General(2, \"Roxy Miller\", \"ST99\", \"TAX-882\", 45.0)\n",
-    "    g1.display_info()\n",
-    "    print()\n",
-    "\n",
-    "    # Create Academic Staff\n",
-    "    a1 = Academic(3, \"Dr. Benjz Jones\", \"ST42\", \"TAX-115\", [\"MSE\", \"Pinoy Pawnstar\"])\n",
-    "    a1.display_info()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "58fb45d1-1064-41e4-9500-cc97e1e841e0",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.12.4"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# Base Class #
+class Person:
+    """Represents the root of the hierarchy."""
+    def __init__(self, id, name):
+        self.id = id
+        self.name = name
+
+    def display_info(self):
+        print(f"ID: {self.id} | Name: {self.name}")
+
+
+# Child Class of Person #
+class Student(Person):
+    """Inherits from Person. Adds student-specific ID."""
+    def __init__(self, id, name, student_id):
+# Using super() to initialize base Person attributes
+        super().__init__(id, name)
+        self.student_id = student_id
+
+    def display_info(self):
+        super().display_info()
+        print(f"Role: Student | Student ID: {self.student_id}")
+
+
+class Staff(Person):
+    """Inherits from Person. Acts as a base for specific staff types."""
+    def __init__(self, id, name, staff_id, tax_num):
+        super().__init__(id, name)
+        self.staff_id = staff_id
+        self.tax_num = tax_num
+
+    def display_info(self):
+        super().display_info()
+        print(f"Staff ID: {self.staff_id} | Tax Number: {self.tax_num}")
+
+
+# Second Level Inheritance (Multi-level) #
+class General(Staff):
+    """Inherits from Staff. Represents administrative/support personnel."""
+    def __init__(self, id, name, staff_id, tax_num, rate_of_pay):
+# Passes info up to Staff, which then passes important information to Person
+        super().__init__(id, name, staff_id, tax_num)
+        self.rate_of_pay = rate_of_pay
+
+    def display_info(self):
+        super().display_info()
+        print(f"Category: General Staff | Pay Rate: ${self.rate_of_pay}/hr")
+
+
+class Academic(Staff):
+    """Inherits from Staff. Represents faculty/researchers."""
+    def __init__(self, id, name, staff_id, tax_num, publications):
+        super().__init__(id, name, staff_id, tax_num)
+        self.publications = publications  # List of strings
+
+    def display_info(self):
+        super().display_info()
+        print(f"Category: Academic | Publications: {', '.join(self.publications)}")
+
+
+# Demonstration #
+if __name__ == "__main__":
+    print("--- University Records ---")
+    
+    # Create a Student
+    s1 = Student(1, "Albert Smith", "S10023")
+    s1.display_info()
+    print()
+
+    # Create General Staff
+    g1 = General(2, "Roxy Miller", "ST99", "TAX-882", 45.0)
+    g1.display_info()
+    print()
+
+    # Create Academic Staff
+    a1 = Academic(3, "Dr. Benjz Jones", "ST42", "TAX-115", ["MSE", "Pinoy Pawnstar"])
+    a1.display_info()
