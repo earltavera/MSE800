@@ -73,5 +73,5 @@ if __name__ == "__main__":
     print()
 
     # Create Academic Staff
-    a1 = Academic(3, "Dr. Benjz Jones", "ST42", "TAX-115", ["MSE", "Pinoy Pawnstar"])
+    a1 = Academic(3, "Dr. Benjz Jones", "ST42", "TAX-115", ["12", "Pinoy Pawnstar"])
     a1.display_info()
