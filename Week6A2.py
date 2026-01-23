@@ -50,7 +50,7 @@ if __name__ == "__main__":
     mse800_course.add_student("S104", "Dindong", 81)
     mse800_course.add_student("S105", "Direk", 67)
     
-    # I added a failing student here to demonstrate that the filter works
+    # Added a failing student here to demonstrate that the filter works
     mse800_course.add_student("S106", "Vice", 45) 
 
     print("--- All Students (Before Filter) ---")
