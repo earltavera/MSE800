@@ -1,3 +1,4 @@
+
 import sqlite3
 import streamlit as st
 from abc import ABC, abstractmethod
@@ -202,4 +203,11 @@ def main():
                     except: st.error("Username already taken.")
     else:
         # Logout logic in sidebar
-        if st
+        if st.sidebar.button("Log Out"):
+            st.session_state.user = None
+            st.rerun()
+        # Direct user to their dashboard
+        st.session_state.user.dashboard()
+
+if __name__ == "__main__":
+    main()
