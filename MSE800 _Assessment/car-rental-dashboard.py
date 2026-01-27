@@ -202,12 +202,20 @@ def main():
                         st.success("Account created! Please switch to Login.")
                     except: st.error("Username already taken.")
     else:
-        # Logout logic in sidebar
         if st.sidebar.button("Log Out"):
             st.session_state.user = None
             st.rerun()
-        # Direct user to their dashboard
         st.session_state.user.dashboard()
+
+    # WEB INTERFACE FOOTER
+    st.markdown("---")
+    st.markdown("Developed by **Earl Tavera** | **2026**")
 
 if __name__ == "__main__":
     main()
+
+# ==========================================
+# DEVELOPER: Earl Tavera
+# YEAR: 2026
+# MSE 800
+# ==========================================
