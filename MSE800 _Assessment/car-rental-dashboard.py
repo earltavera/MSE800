@@ -169,7 +169,7 @@ def main():
     st.set_page_config(page_title="Car Rental System", layout="wide")
 
     if 'user' not in st.session_state:
-        st.title("🚗 Car Rental Pro")
+        st.title("🚗 Welcome to Car Rental Hub")
         tab1, tab2 = st.tabs(["Login", "Register"])
 
         with tab1:
