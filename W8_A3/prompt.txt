@@ -1,0 +1,60 @@
+Senior Python Developer (Data Analytics) - Auckland, New Zealand
+
+About the Role:
+We are looking for a Senior Python Developer with a strong data focus to join our Data Engineering & Analytics team. You will be responsible for architecting and building robust data pipelines, developing analytical tools, and automating data workflows to empower data-driven decision-making across the business.
+
+Requirements:
+
+5+ years of experience in Python development, with a heavy focus on data processing libraries (Pandas, NumPy, SciPy).
+
+Strong proficiency in building data applications using frameworks like Streamlit, Dash, or Flask.
+
+Deep expertise in SQL and experience optimizing complex queries for large datasets (PostgreSQL, Snowflake, or BigQuery).
+
+Proven experience designing and maintaining ETL/ELT pipelines (using tools like Airflow, Prefect, or Dagster).
+
+Experience with cloud data services (AWS Glue/Lambda/Redshift or Azure Data Factory/Synapse).
+
+Familiarity with containerization (Docker) and orchestration (Kubernetes) for deploying data applications.
+
+Knowledge of modern data stack tools, particularly dbt (data build tool).
+
+Strong communication skills to translate technical data concepts to non-technical stakeholders.
+
+Nice to Have:
+
+Experience with Big Data frameworks (Apache Spark, PySpark, Databricks).
+
+Basic understanding of Machine Learning workflows (Scikit-learn, TensorFlow) and MLOps.
+
+Familiarity with Infrastructure as Code (Terraform, CloudFormation).
+
+Experience with visualization tools (Tableau, PowerBI) and how to embed them.
+
+Contributions to open-source data projects.
+
+Responsibilities:
+
+Design, build, and maintain scalable data pipelines and architectures.
+
+Develop custom internal tools and dashboards for data visualization and reporting.
+
+Clean, transform, and model data to ensure high quality and accessibility for analysts.
+
+Collaborate with Data Scientists to productionize machine learning models.
+
+Optimize database performance and reduce latency in data retrieval.
+
+Mentor junior data engineers and conduct code reviews to ensure best practices.
+
+Benefits:
+
+Competitive salary ($130k - $170k NZD)
+
+Flexible working arrangements (hybrid/remote options)
+
+Health insurance and wellness package
+
+Professional development budget (conferences, certifications)
+
+Modern office in Auckland CBD with standing desks and great coffee
