@@ -1,0 +1,31 @@
+
+
+services:
+  # The Backend API
+  backend:
+    build: ./backend
+    ports:
+      - "5001:5000"
+    environment:
+      - DB_HOST=database # Matches the service name below
+    depends_on:
+      - database
+
+  # The Frontend UI
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+  # A Database (e.g., MongoDB or PostgreSQL)
+  database:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - db-data:/data/db
+
+volumes:
+  db-data:
