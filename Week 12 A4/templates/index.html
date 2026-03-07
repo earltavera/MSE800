@@ -2,24 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Flask Project - Pexels Image</title>
+    <title>Flask Image Upload</title>
     <style>
         body { font-family: sans-serif; text-align: center; padding: 50px; }
-        img { border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); margin-top: 20px; }
+        .upload-section { background: #f4f4f4; padding: 20px; border-radius: 10px; margin-bottom: 20px; }
+        img { border-radius: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); max-width: 600px; }
     </style>
 </head>
 <body>
-    <h1>Flask Framework Project</h1>
+    <h1>Flask Image Uploader</h1>
     
-    <p>Explore the 
-        <a href="https://flask.palletsprojects.com/en/stable/quickstart/" target="_blank">
-            Official Flask Quickstart Guide
-        </a>
-    </p>
+    <div class="upload-section">
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*">
+            <button type="submit">Upload Image</button>
+        </form>
+    </div>
+
+    <p>Documentation: <a href="https://flask.palletsprojects.com/en/stable/quickstart/" target="_blank">Flask Quickstart</a></p>
 
     <hr>
 
-    <h3>Outcome:</h3>
-    <img src="{{ img }}" alt="Pexels Galaxy Image" width="600">
+    <h3>Preview:</h3>
+    <img src="{{ img }}" alt="Current Image">
 </body>
 </html>
