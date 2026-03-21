@@ -1,0 +1,6 @@
+2026-03-22 09:19:12,232 - INFO - Executing 'add' | Args: (10, 25) | Kwargs: {}
+2026-03-22 09:19:12,232 - INFO - Success: 'add' | Result: 35 | Time: 0.000188s
+2026-03-22 09:19:12,233 - INFO - Executing 'divide' | Args: (10, 2) | Kwargs: {}
+2026-03-22 09:19:12,233 - INFO - Success: 'divide' | Result: 5.0 | Time: 0.000043s
+2026-03-22 09:19:12,233 - INFO - Executing 'divide' | Args: (10, 0) | Kwargs: {}
+2026-03-22 09:19:12,233 - ERROR - Error in 'divide' after 0.000030s: division by zero
