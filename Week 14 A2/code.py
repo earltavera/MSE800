@@ -3,13 +3,11 @@ import functools
 def log_decorator(func):
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
-        # 1. Log function name and inputs
+      
         print(f"Calling function: '{func.__name__}' with args: {args} and kwargs: {kwargs}")
         
-        # 2. Execute the actual function
         result = func(*args, **kwargs)
         
-        # 3. Log the result
         print(f"Result of '{func.__name__}': {result}\n")
         return result
     return wrapper
